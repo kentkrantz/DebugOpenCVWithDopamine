@@ -7,6 +7,7 @@
 // After <opencv2/opencv.hpp>
 #include <UIKit/UIKit.h>
 
+// Private API for taking screenshot of the screen
 OBJC_EXTERN UIImage *_UICreateScreenUIImage(void) NS_RETURNS_RETAINED;
 
 void testMatchTemplate()
@@ -23,6 +24,7 @@ void testMatchTemplate()
 
     NSString *filePath = [dir stringByAppendingPathComponent:@"DebugOpenCVWithDopamine.png"];
 
+    // Take screenshot of the screen
     UIImage *screenImage = _UICreateScreenUIImage();
 
     // Save screenImage to filePath
@@ -37,7 +39,15 @@ void testMatchTemplate()
     }
 
     // TODO: cv::imread leads to crash in Dopamine env.
-    cv::Mat sceneImage = cv::imread([filePath UTF8String]);
+    cv::Mat sceneImage_ = cv::imread([filePath UTF8String]);
+    if(sceneImage_.empty()) {
+        NSLog(@"Error: Could not read the image with `cv::imread`");
+        return;
+    }
+
+    // Convert the image from BGR to RGB color space
+    cv::Mat sceneImage;
+    cv::cvtColor(sceneImage_, sceneImage, cv::COLOR_BGR2RGB);
 
     // Cut out a region from the source image to make a "template" image for matching template testing
     cv::Rect region(100, 200, 180, 120);

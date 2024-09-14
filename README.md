@@ -23,8 +23,10 @@ cd vendor
 # Back to project root dir
 cd ..
 
+# cp .env.example to .env
+# And set the target device IP to `THEOS_DEVICE_IP`
+
 # Build and install the tweak
-# You may need to modify the target device IP in `build.sh`
 ./build.sh
 ```
 

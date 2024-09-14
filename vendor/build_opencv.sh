@@ -10,7 +10,7 @@ TARGET_DIR=opencv_build_ios
 # python opencv/platforms/ios/build_framework.py ${TARGET_DIR} \
 #     --contrib opencv_contrib \
 #     --iphoneos_archs arm64,arm64e \
-#     --iphoneos_deployment_target 11.0 \
+#     --iphoneos_deployment_target 12.0 \
 #     --build_only_specified_archs \
 #     --disable-swift \
 #     --enable_nonfree
