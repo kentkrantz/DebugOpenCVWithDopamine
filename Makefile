@@ -9,8 +9,7 @@ TWEAK_NAME = DebugOpenCVWithDopamine
 
 DebugOpenCVWithDopamine_FILES = \
 		src/TestOpenCV.mm \
-		src/Tweak.xm \
-		src/Test.swift
+		src/Tweak.xm
 
 DebugOpenCVWithDopamine_FRAMEWORKS = Foundation CoreFoundation IOKit MobileCoreServices CoreGraphics UIKit CoreLocation CoreML
 
@@ -39,7 +38,7 @@ src/TestOpenCV.mm_CFLAGS = $(DebugOpenCVWithDopamine_CXXFLAGS)
 DebugOpenCVWithDopamine_LDFLAGS += \
 		-F./frameworks \
 		-lc++ \
-		-lc++abi # Add this line to link the C++ ABI library
+		-lc++abi
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

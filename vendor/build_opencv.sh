@@ -19,6 +19,7 @@ python opencv/platforms/ios/build_framework.py ${TARGET_DIR} \
     --iphoneos_archs arm64,arm64e \
     --iphoneos_deployment_target 14.0 \
     --build_only_specified_archs \
+    --disable-swift \
     --debug \
     --debug-info
 
