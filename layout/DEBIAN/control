@@ -1,0 +1,8 @@
+Package: xxx.test.opencv.dopamine
+Name: DebugOpenCVWithDopamine
+Version: 0.0.1
+Description: Test opencv crash with Dopamine
+Section: Utilities
+Depends: firmware (>= 14) | ${LIBSWIFT}, ellekit
+Priority: optional
+Architecture: iphoneos-arm64

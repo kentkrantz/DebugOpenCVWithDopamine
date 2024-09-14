@@ -1,0 +1,11 @@
+.DS_Store
+.theos
+.idea/
+obj
+cmake-build-debug
+.vscode
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
+packages/
+
+frameworks/opencv2.framework
