@@ -26,6 +26,7 @@ void setupOpenCVErrorHandling()
 
 %hook SpringBoard
 
+// Handle volume up button event to trigger testMatchTemplate procedure
 - (BOOL)_handlePhysicalButtonEvent:(UIPressesEvent *)pressesEvent
 {
     LoggerApp(1, @"_handlePhysicalButtonEvent");

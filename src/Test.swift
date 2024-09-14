@@ -1,5 +1,3 @@
-
-
 func test() {
     print("test")
 }
